@@ -1,0 +1,110 @@
+/* --- RESET I BAZA --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh;
+    background-color: #161623;
+    /* Tło w miękkie kropki */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+    background-size: 25px 25px;
+    overflow: hidden; 
+    position: relative;
+}
+
+/* --- ANIMOWANE TŁO --- */
+.background-shape { position: absolute; border-radius: 50%; filter: blur(2px); z-index: 0; }
+
+.shape-1 { 
+    width: 300px; height: 300px; 
+    background: linear-gradient(#1845ad, #23a2f6); 
+    top: -50px; left: -50px; 
+    animation: move-complex 4s ease-in-out infinite alternate; 
+}
+
+.shape-2 { 
+    width: 280px; height: 280px; 
+    background: linear-gradient(to right, #ff512f, #f09819); 
+    bottom: -60px; right: -30px; 
+    animation: move-complex-2 5s ease-in-out infinite alternate; 
+}
+
+.shape-3 { 
+    width: 150px; height: 150px; 
+    background: linear-gradient(#2ef0de, #23c6b6); 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0.6; 
+    animation: pulse-rotate 3s infinite; 
+}
+
+/* --- GŁÓWNA KARTA --- */
+.glass-form {
+    position: relative; width: 90%; max-width: 400px; min-height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    z-index: 10; padding: 40px;
+    display: flex; flex-direction: column; justify-content: center;
+}
+
+/* Fix dla Vanilla-Tilt */
+.js-tilt-glare { border-radius: 20px; }
+.js-tilt-glare-inner { border-radius: 20px; }
+
+/* --- WIDOKI --- */
+.form-section { display: none; width: 100%; animation: fadeIn 0.4s ease-out; }
+.form-section.active { display: block; }
+h2 { color: #fff; font-size: 2rem; font-weight: 600; margin-bottom: 20px; text-align: center; }
+.info-text { color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 20px; font-size: 0.9rem; }
+
+/* --- INPUTY --- */
+.input-group { width: 100%; margin-bottom: 20px; position: relative; }
+.input-group i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: rgba(255, 255, 255, 0.8); font-size: 1.2rem; }
+
+.glass-input {
+    width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px 12px 45px; border-radius: 35px; color: #fff; font-size: 16px; outline: none; transition: 0.3s;
+}
+.glass-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+.glass-input:focus { background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.6); box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+
+/* --- PRZYCISK --- */
+.btn-submit {
+    width: 100%; margin-top: 10px; padding: 12px; background: #fff; color: #161623;
+    border: none; border-radius: 35px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s;
+}
+.btn-submit:hover { background: #f0f0f0; transform: scale(1.02); }
+
+/* --- LINKI --- */
+.links { width: 100%; display: flex; justify-content: space-between; margin-top: 20px; font-size: 0.85rem; }
+.links.center { justify-content: center; }
+.links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: 0.2s; cursor: pointer; }
+.links a:hover { color: #fff; text-decoration: underline; }
+
+/* --- STOPKA --- */
+.github-footer { position: absolute; bottom: 20px; display: flex; align-items: center; gap: 10px; z-index: 10; }
+.github-footer a { display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.5); text-decoration: none; font-size: 0.9rem; transition: 0.3s; padding: 8px 15px; border-radius: 20px; }
+.github-footer a:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+/* --- ANIMACJE --- */
+@keyframes move-complex {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(40px, 40px) rotate(45deg); }
+    100% { transform: translate(-20px, 60px) rotate(90deg); }
+}
+@keyframes move-complex-2 {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-50px, -30px) scale(1.1); }
+    100% { transform: translate(20px, -50px) scale(0.9); }
+}
+@keyframes pulse-rotate {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

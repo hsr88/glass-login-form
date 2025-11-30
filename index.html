@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaloguj się - hsr88</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+    <div class="background-shape shape-3"></div>
+
+    <div class="glass-form" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-speed="400" data-tilt-max="10">
+        
+        <div id="login-view" class="form-section active">
+            <h2>Zaloguj się</h2>
+            <form>
+                <div class="input-group">
+                    <i class="ri-user-3-line"></i>
+                    <input type="text" class="glass-input" placeholder="Login" required>
+                </div>
+                <div class="input-group">
+                    <i class="ri-lock-2-line"></i>
+                    <input type="password" class="glass-input" placeholder="Hasło" required>
+                </div>
+                <button type="submit" class="btn-submit">Zaloguj</button>
+            </form>
+            <div class="links">
+                <a onclick="switchView('forgot-view')">Zapomniałeś hasła?</a>
+                <a onclick="switchView('register-view')">Zarejestruj się</a>
+            </div>
+        </div>
+
+        <div id="register-view" class="form-section">
+            <h2>Rejestracja</h2>
+            <form>
+                <div class="input-group">
+                    <i class="ri-mail-line"></i>
+                    <input type="email" class="glass-input" placeholder="Adres Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="ri-user-3-line"></i>
+                    <input type="text" class="glass-input" placeholder="Twój Login" required>
+                </div>
+                <div class="input-group">
+                    <i class="ri-lock-2-line"></i>
+                    <input type="password" class="glass-input" placeholder="Wybierz Hasło" required>
+                </div>
+                <button type="submit" class="btn-submit">Stwórz konto</button>
+            </form>
+            <div class="links center">
+                <a onclick="switchView('login-view')">Masz już konto? Zaloguj się</a>
+            </div>
+        </div>
+
+        <div id="forgot-view" class="form-section">
+            <h2>Reset hasła</h2>
+            <p class="info-text">Podaj email, aby odzyskać dostęp.</p>
+            <form>
+                <div class="input-group">
+                    <i class="ri-mail-line"></i>
+                    <input type="email" class="glass-input" placeholder="Twój Email" required>
+                </div>
+                <button type="submit" class="btn-submit">Wyślij link</button>
+            </form>
+            <div class="links center">
+                <a onclick="switchView('login-view')">Wróć do logowania</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="github-footer">
+        <a href="https://github.com/hsr88" target="_blank">
+            <i class="ri-github-fill"></i>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
