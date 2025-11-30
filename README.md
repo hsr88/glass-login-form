@@ -2,8 +2,8 @@
 
 Nowoczesny, responsywny formularz logowania stworzony w stylu Glassmorphism. Projekt wykorzystuje efekt "mrożonego szkła" (frosted glass), animowane tło oraz interaktywny efekt 3D podążający za kursorem.
 
-## Demo
-Projekt działa jako Single Page Application (SPA) - pozwala na przełączanie między logowaniem, rejestracją i resetem hasła bez przeładowania strony.
+## Demo [klik](https://hsr88.github.io/glass-login-form/)
+Projekt działa jako Single Page Application (SPA) - pozwala na przełączanie między logowaniem, rejestracją i resetem hasła bez przeładowania strony. 
 
 ## Funkcje
 - 🎨 **Glassmorphism UI:** Półprzezroczyste panele z rozmyciem tła (`backdrop-filter`).
@@ -23,5 +23,9 @@ Projekt działa jako Single Page Application (SPA) - pozwala na przełączanie m
 1. Sklonuj repozytorium lub pobierz pliki.
 2. Otwórz plik `index.html` w dowolnej przeglądarce.
 
+<img width="466" height="543" alt="Zrzut ekranu 2025-11-30 103341" src="https://github.com/user-attachments/assets/6cf212cf-c44b-4657-9619-03e0dc888ecc" />
+
+
 ## Autor
+
 [hsr88](https://github.com/hsr88)
