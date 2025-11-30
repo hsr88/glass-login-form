@@ -1,4 +1,7 @@
 # Glassmorphism Login Form
+![License](https://img.shields.io/github/license/hsr88/glass-login-form?style=flat-square)
+![Stars](https://img.shields.io/github/stars/hsr88/glass-login-form?style=flat-square)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-green?style=flat-square)
 
 Nowoczesny, responsywny formularz logowania stworzony w stylu Glassmorphism. Projekt wykorzystuje efekt "mrożonego szkła" (frosted glass), animowane tło oraz interaktywny efekt 3D podążający za kursorem.
 
@@ -29,3 +32,4 @@ Projekt działa jako Single Page Application (SPA) - pozwala na przełączanie m
 ## Autor
 
 [hsr88](https://github.com/hsr88)
+
